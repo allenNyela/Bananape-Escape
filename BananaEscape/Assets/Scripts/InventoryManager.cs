@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
+
+    public static bool HasKey;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +16,15 @@ public class InventoryManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void SetKey(bool hasKey)
+    {
+        HasKey = hasKey;
+    }
+
+    public bool GetKey()
+    {
+        return HasKey;
     }
 }

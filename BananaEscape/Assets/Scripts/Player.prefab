@@ -179,8 +179,6 @@ GameObject:
   - component: {fileID: 6856261708592439348}
   - component: {fileID: 299306158186952144}
   - component: {fileID: 1781091314557854847}
-  - component: {fileID: 1338269527226934780}
-  - component: {fileID: 5561148112164756920}
   - component: {fileID: 7606948707153149888}
   m_Layer: 2
   m_Name: Player
@@ -255,7 +253,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &1781091314557854847
@@ -285,76 +283,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1338269527226934780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2986123455295531954}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: d2e2f9437d5ef9f4f8befa5d63a1a43f, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 5c584b64-ba2f-412e-9581-c62fcd26fd9d
-    m_ActionName: Player/Move[/Keyboard/a,/Keyboard/d,/Keyboard/leftArrow,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5561148112164756920}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: Jump
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 445637cd-3d13-47f3-8977-9e10b61b1dc0
-    m_ActionName: Player/Jump[/Keyboard/space]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: 0
-  m_Camera: {fileID: 0}
---- !u!114 &5561148112164756920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2986123455295531954}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c68c5a9f47b213143af2fc1ff72efffb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxSpeed: 60
-  speedUpLerpValue: 1
-  jumpHeight: 15
-  slowDownForce: 5
-  damageWaitForSeconds: 2
-  wallOfDeath: {fileID: 0}
-  gameOver: {fileID: 0}
-  swinging: 0
 --- !u!58 &7606948707153149888
 CircleCollider2D:
   m_ObjectHideFlags: 0

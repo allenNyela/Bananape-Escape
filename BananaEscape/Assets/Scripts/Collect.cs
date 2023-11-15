@@ -5,6 +5,7 @@ using UnityEngine;
 public class Collect : MonoBehaviour
 {
     public GameObject inventory;
+    //public InventoryManager inventoryManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,7 @@ public class Collect : MonoBehaviour
     {
         if (collision.gameObject.name.StartsWith("Player"))
         {
+            gameObject.GetComponent<InventoryManager>().SetKey(true);
             inventory.SetActive(true);
             Destroy(gameObject);
         }
