@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Collect : MonoBehaviour
+public class InventoryManager : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -14,13 +14,5 @@ public class Collect : MonoBehaviour
     void Update()
     {
         
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.name.StartsWith("Player"))
-        {
-            Destroy(this);
-        }
     }
 }
