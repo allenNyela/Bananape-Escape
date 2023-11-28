@@ -9,13 +9,17 @@ public class SwitchToggleDoor : SwitchToggleObject
     // Start is called before the first frame update
     public void SetDoorState()
     {
-        openDoor.SetActive(activated);
-        closedDoor.SetActive(!activated);
+        openDoor.SetActive(!activated);
+        closedDoor.SetActive(activated);
     }
 
     public override void Toggle()
     {
         base.Toggle();
+        SetDoorState();
+    }
+    
+    void Start(){
         SetDoorState();
     }
 }
