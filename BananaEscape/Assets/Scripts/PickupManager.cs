@@ -23,9 +23,16 @@ public class PickupManager : MonoBehaviour
     [SerializeField]
     PlayerPlatformer player;
 
+    [SerializeField]
+    float pickUpRadius;
+
+    public float PickupRadius { get { return pickUpRadius; } }
+
     public void GiveToPlayer(GameObject gameObject)
     {
-        if (player.heldObject != gameObject)
+        float dist = Vector2.Distance(player.transform.position, gameObject.transform.position);
+
+        if (player.heldObject != gameObject && dist < pickUpRadius)
             player.heldObject = gameObject;
     }
 }

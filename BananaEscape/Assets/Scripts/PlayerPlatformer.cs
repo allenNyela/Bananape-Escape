@@ -72,7 +72,7 @@ public class PlayerPlatformer : MonoBehaviour
             Vector3 direction = (mousePos - transform.position);
             direction.Normalize();
 
-            heldObject.transform.position = transform.position + direction * 2;
+            heldObject.transform.position = transform.position + direction * PickupManager.Instance.PickupRadius;
             Rigidbody2D objRB = heldObject.GetComponent<Rigidbody2D>();
             if (objRB.gravityScale != 0)
                 objRB.gravityScale = 0;
@@ -159,6 +159,8 @@ public class PlayerPlatformer : MonoBehaviour
         
         Rigidbody2D objRB = heldObject.GetComponent<Rigidbody2D>();
 
+        Debug.Log(context.action.ReadValue<float>());
+
         if (canThrow && context.action.ReadValue<float>() != 0)
         {
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -167,6 +169,22 @@ public class PlayerPlatformer : MonoBehaviour
             direction.Normalize();
 
             objRB.AddForce(direction * maxSpeed, ForceMode2D.Impulse);
+            objRB.gravityScale = 2;
+            heldObject = null;
+        }
+    }
+
+    public void DropObject(InputAction.CallbackContext context)
+    {
+        if (heldObject == null)
+            return;
+
+        Rigidbody2D objRB = heldObject.GetComponent<Rigidbody2D>();
+
+        Debug.Log(context.action.ReadValue<float>());
+
+        if (canThrow && context.action.ReadValue<float>() != 0)
+        {
             objRB.gravityScale = 2;
             heldObject = null;
         }
