@@ -53,3 +53,6 @@ TagManager:
   - name: wires
     uniqueID: 1252451331
     locked: 0
+  - name: FadeLayer
+    uniqueID: 2398605787
+    locked: 0

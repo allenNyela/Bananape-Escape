@@ -16,4 +16,8 @@ public class CameraStation : MonoBehaviour
         attachedCamera.enabled = true;
         Camera.main.enabled = false;
     }
+
+    public void OnMouseDown(){
+        Activate();
+    }
 }
