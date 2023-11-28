@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Detect : MonoBehaviour
+public class TableBehv : MonoBehaviour
 {
-    public GameObject GameOverScreen;
     // Start is called before the first frame update
     void Start()
     {
-        GameOverScreen.SetActive(false);
+        
     }
 
     // Update is called once per frame
@@ -21,20 +20,15 @@ public class Detect : MonoBehaviour
     {
         if (collision.gameObject.name.StartsWith("Player"))
         {
-            if (!gameObject.GetComponent<Table>().GetHidden()) {
-                GameOverScreen.SetActive(true);
-            }
+            gameObject.GetComponent<Table>().SetHidden(true);
         }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.name.StartsWith("Player"))
         {
-            if (!gameObject.GetComponent<Table>().GetHidden())
-            {
-                GameOverScreen.SetActive(true);
-            }
+            gameObject.GetComponent<Table>().SetHidden(false);
         }
     }
 }
