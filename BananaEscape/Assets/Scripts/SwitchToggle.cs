@@ -9,6 +9,9 @@ public class SwitchToggle : MonoBehaviour
     [SerializeField, Tooltip("wire prefab")]private GameObject wirePrefab;
     [SerializeField, Tooltip("the color attributed to this toggle")]private Color circuitColor;
     [SerializeField, Tooltip("the z depth for wires")]private float wireZDepth = -2;
+    // [SerializeField, Tooltip("the off sprite")]private Sprite offSprite;
+    // [SerializeField, Tooltip("the on sprite")]private Sprite onSprite;
+    //private bool 
     // Start is called before the first frame update
     public void Toggle()
     {

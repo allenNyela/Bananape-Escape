@@ -1166,6 +1166,22 @@ PrefabInstance:
       propertyPath: toggleObjects.Array.data[1]
       value: 
       objectReference: {fileID: 461953229907392577}
+    - target: {fileID: 5378982865380989224, guid: ab72b656529cf744ab88b74f6322a9c4, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378982865380989224, guid: ab72b656529cf744ab88b74f6322a9c4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4972521039485676230, guid: 634a4d34b36982c4c8cabc9e57f15b93, type: 3}
+    - target: {fileID: 6681789132403044592, guid: ab72b656529cf744ab88b74f6322a9c4, type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6681789132403044592, guid: ab72b656529cf744ab88b74f6322a9c4, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: -6083369762603526822, guid: f1f60ceb04b17fe4382a902883a64ca1, type: 3}
     - target: {fileID: 7509502297254317592, guid: ab72b656529cf744ab88b74f6322a9c4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1609,6 +1625,22 @@ PrefabInstance:
       propertyPath: toggleObjects.Array.data[2]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5378982865380989224, guid: ab72b656529cf744ab88b74f6322a9c4, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378982865380989224, guid: ab72b656529cf744ab88b74f6322a9c4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6343215904468264386, guid: 03470491e7fc4134d9a9fcca1a8e3f6e, type: 3}
+    - target: {fileID: 6681789132403044592, guid: ab72b656529cf744ab88b74f6322a9c4, type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6681789132403044592, guid: ab72b656529cf744ab88b74f6322a9c4, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: -4805989405048382506, guid: 008a71e211966fd42ba6412207eb94c8, type: 3}
     - target: {fileID: 7509502297254317592, guid: ab72b656529cf744ab88b74f6322a9c4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1737,6 +1769,26 @@ PrefabInstance:
       objectReference: {fileID: 461953229907392577}
     - target: {fileID: 1283830081584051363, guid: ab72b656529cf744ab88b74f6322a9c4, type: 3}
       propertyPath: toggleObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378982865380989224, guid: ab72b656529cf744ab88b74f6322a9c4, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378982865380989224, guid: ab72b656529cf744ab88b74f6322a9c4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3044337865946486444, guid: 1501d67685bfdb14793dfb0a3bc629ed, type: 3}
+    - target: {fileID: 6681789132403044592, guid: ab72b656529cf744ab88b74f6322a9c4, type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6681789132403044592, guid: ab72b656529cf744ab88b74f6322a9c4, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: -2905792763937025363, guid: fa1ffb24f05416d4da8af430ae96c2b1, type: 3}
+    - target: {fileID: 6681789132403044592, guid: ab72b656529cf744ab88b74f6322a9c4, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7509502297254317592, guid: ab72b656529cf744ab88b74f6322a9c4, type: 3}

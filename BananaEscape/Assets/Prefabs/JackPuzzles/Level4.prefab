@@ -1028,6 +1028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 5378464306788851932}
+  Canvases: []
 --- !u!1 &2324225220148323452
 GameObject:
   m_ObjectHideFlags: 0
@@ -1798,6 +1799,14 @@ PrefabInstance:
       propertyPath: toggleObjects.Array.data[3]
       value: 
       objectReference: {fileID: 8855211198749720501}
+    - target: {fileID: 5378982865380989224, guid: ab72b656529cf744ab88b74f6322a9c4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6343215904468264386, guid: 03470491e7fc4134d9a9fcca1a8e3f6e, type: 3}
+    - target: {fileID: 6681789132403044592, guid: ab72b656529cf744ab88b74f6322a9c4, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: -4805989405048382506, guid: 008a71e211966fd42ba6412207eb94c8, type: 3}
     - target: {fileID: 6681789132403044592, guid: ab72b656529cf744ab88b74f6322a9c4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -2568,6 +2577,14 @@ PrefabInstance:
       propertyPath: toggleObjects.Array.data[2]
       value: 
       objectReference: {fileID: 8855211198749720501}
+    - target: {fileID: 5378982865380989224, guid: ab72b656529cf744ab88b74f6322a9c4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3044337865946486444, guid: 1501d67685bfdb14793dfb0a3bc629ed, type: 3}
+    - target: {fileID: 6681789132403044592, guid: ab72b656529cf744ab88b74f6322a9c4, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: -2905792763937025363, guid: fa1ffb24f05416d4da8af430ae96c2b1, type: 3}
     - target: {fileID: 7509502297254317592, guid: ab72b656529cf744ab88b74f6322a9c4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
