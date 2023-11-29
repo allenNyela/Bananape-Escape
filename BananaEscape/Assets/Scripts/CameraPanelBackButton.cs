@@ -7,5 +7,6 @@ public class CameraPanelBackButton : MonoBehaviour
     
     public void ResetCamera(){
         CameraReset.Instance.ResetCamera();
+        GameManager.Instance.Pause(false);
     }
 }
