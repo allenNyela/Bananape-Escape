@@ -8,7 +8,6 @@ public class Enemy : MonoBehaviour
     bool Horizontal;
     [SerializeField]
     float length;
-    float deltaTime = 0;
     [SerializeField]
     float speed;
     float targetPosition;

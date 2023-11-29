@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1060289817221342723}
   - component: {fileID: 6434218341670148341}
   - component: {fileID: 6862899774370057761}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Open
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2461724386487891546}
   - component: {fileID: 6463823406101241271}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,7 +225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1541954915085525594}
   - component: {fileID: 2622059503867594448}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Sprite Mask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,7 +308,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1885384270016084518}
   - component: {fileID: 4814525945611686793}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: ToggleDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -359,7 +359,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4395509572039693723}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Attach Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -392,7 +392,7 @@ GameObject:
   - component: {fileID: 7761554827054016612}
   - component: {fileID: 5644544012574446561}
   - component: {fileID: 5422532869665485614}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Closed
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -15,8 +15,9 @@ public class CameraStation : MonoBehaviour
 
     // Update is called once per frame
     public void Activate(){
-        attachedCamera.enabled = true;
         Camera.main.enabled = false;
+        CameraReset.Instance.HideMainCamera();
+        attachedCamera.enabled = true;
         canvas.SetActive(true);
         foreach(SwitchToggle button in buttons){
             button.SetupWires(attachedCamera);
