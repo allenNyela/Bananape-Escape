@@ -22,6 +22,7 @@ public class Detect : MonoBehaviour
         if (collision.gameObject.name.StartsWith("Player"))
         {
             if (!gameObject.GetComponent<Table>().GetHidden()) {
+                this.GetComponent<InventoryManager>().SetKey(false);
                 GameOverScreen.SetActive(true);
             }
         }
@@ -33,6 +34,7 @@ public class Detect : MonoBehaviour
         {
             if (!gameObject.GetComponent<Table>().GetHidden())
             {
+                this.GetComponent<InventoryManager>().SetKey(false);
                 GameOverScreen.SetActive(true);
             }
         }

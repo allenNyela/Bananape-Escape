@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NyelaScene.unity
     guid: b57ad3c98c7de9546b6e07a2f254f51f
+  - enabled: 1
+    path: Assets/Scenes/Jack Puzzle Scene.unity
+    guid: 37d9ec49199f41c41938885d88092e1c
   m_configObjects: {}

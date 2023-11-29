@@ -5,6 +5,8 @@ using UnityEngine;
 public class Collect : MonoBehaviour
 {
     public GameObject inventory;
+    public GameObject Unlocked;
+    public Sprite OpenedVent;
     //public InventoryManager inventoryManager;
     // Start is called before the first frame update
     void Start()
@@ -24,6 +26,7 @@ public class Collect : MonoBehaviour
         {
             gameObject.GetComponent<InventoryManager>().SetKey(true);
             inventory.SetActive(true);
+            Unlocked.GetComponent<SpriteRenderer>().sprite = OpenedVent;
             Destroy(gameObject);
         }
     }
