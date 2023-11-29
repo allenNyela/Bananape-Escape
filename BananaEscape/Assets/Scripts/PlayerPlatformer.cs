@@ -26,6 +26,8 @@ public class PlayerPlatformer : MonoBehaviour
     bool damageSlowDown = false;
     public bool swinging = false;
 
+    public bool Grounded { get { return canJump; } }
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();

@@ -29,6 +29,10 @@ public class CameraFollow : MonoBehaviour
         currentTrackPoint = rightTrackPoint;
     }
 
+    private void Update()
+    {
+    }
+
     private void FixedUpdate()
     {
         float cameraMoveSpeed = Time.fixedDeltaTime * moveSpeed * Mathf.Abs(playerRB.velocity.x);
