@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/NyelaScene.unity
+    guid: b57ad3c98c7de9546b6e07a2f254f51f
+  - enabled: 1
+    path: Assets/Scenes/ThomasPuzzle.unity
+    guid: ee3691c83aa00b442a2c2486ee288888
   m_configObjects: {}
