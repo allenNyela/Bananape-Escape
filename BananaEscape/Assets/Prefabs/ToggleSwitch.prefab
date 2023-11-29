@@ -148,4 +148,4 @@ MonoBehaviour:
   toggleObjects: []
   wirePrefab: {fileID: 896714067288527916, guid: 64d13c48e8a73b04bba39cf7d2bfd228, type: 3}
   circuitColor: {r: 0, g: 0, b: 0, a: 0}
-  wireZDepth: -5
+  wireZDepth: -2

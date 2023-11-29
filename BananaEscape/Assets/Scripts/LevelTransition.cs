@@ -36,7 +36,6 @@ public class LevelTransition : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.GetComponent<Canvas>().enabled = true;
         SweepOff();
     }
 
@@ -55,7 +54,7 @@ public class LevelTransition : MonoBehaviour
         sceneToChangeTo = sceneToTransitionTo;
     }
 
-    public void ResetLevel(){
+    void ResetLevel(){
         SweepIn(SceneManager.GetActiveScene().name);
     }
 

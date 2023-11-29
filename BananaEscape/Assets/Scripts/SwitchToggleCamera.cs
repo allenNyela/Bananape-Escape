@@ -27,7 +27,6 @@ public class SwitchToggleCamera : SwitchToggleObject
             RaycastOriginPoint = newGO.transform;
             RaycastOriginPoint.parent = cameraVision.transform;
             RaycastOriginPoint.localPosition = new Vector3(polyCol.points[0].x, polyCol.points[0].y, transform.position.z);
-            Debug.Log("setup origin");
            
         }
         if(!horiRaycastPoint){
@@ -35,14 +34,13 @@ public class SwitchToggleCamera : SwitchToggleObject
             horiRaycastPoint = newGO.transform;
             horiRaycastPoint.parent = cameraVision.transform;
             horiRaycastPoint.localPosition = new Vector3(polyCol.points[1].x, polyCol.points[1].y, transform.position.z);
-            Debug.Log("setup hori");
+            
         }
         if(!vertRaycastPoint){
             GameObject newGO = new GameObject("Raycast Vertical Point");
             vertRaycastPoint = newGO.transform;
             vertRaycastPoint.parent = cameraVision.transform;
             vertRaycastPoint.localPosition = new Vector3(polyCol.points[2].x, polyCol.points[2].y, transform.position.z);
-            Debug.Log("setup vert");
             
         }
         horiSpriteMask.transform.rotation = Quaternion.identity;
@@ -65,25 +63,24 @@ public class SwitchToggleCamera : SwitchToggleObject
         if(hit2D){
             //if(hit2D.point.x > horiRaycastPoint.position.x){
                 horiSpriteMask.position = new Vector3((hit2D.point.x + horiRaycastPoint.position.x) / 2, horiSpriteMask.position.y, horiSpriteMask.position.z);
-                horiSpriteMask.localScale = new Vector3(Mathf.Abs(hit2D.point.x - horiRaycastPoint.position.x), horiSpriteMask.localScale.y, horiSpriteMask.localScale.z);
+                horiSpriteMask.localScale = new Vector3(Mathf.Abs(hit2D.point.x - horiRaycastPoint.position.x), horiSpriteMask.lossyScale.y, horiSpriteMask.lossyScale.z);
             //}
         }
         else{
             horiSpriteMask.position = new Vector3(horiRaycastPoint.position.x, horiSpriteMask.position.y, horiSpriteMask.position.z);
-            horiSpriteMask.localScale = new Vector3(0, horiSpriteMask.localScale.y, horiSpriteMask.localScale.z);
-            //Debug.Log("no hori hit: " + horiSpriteMask.localScale.y);
+            horiSpriteMask.localScale = new Vector3(0, horiSpriteMask.lossyScale.y, horiSpriteMask.lossyScale.z);
         }
 
         hit2D = Physics2D.Linecast(RaycastOriginPoint.position, vertRaycastPoint.position, obstacleLayer);
         if(hit2D){
             //if(hit2D.point.y > vertRaycastPoint.position.y){
                 vertSpriteMask.position = new Vector3(vertSpriteMask.position.x, (hit2D.point.y + vertRaycastPoint.position.y) / 2, vertSpriteMask.position.z);
-                vertSpriteMask.localScale = new Vector3(vertSpriteMask.localScale.x, Mathf.Abs(hit2D.point.y - vertRaycastPoint.position.y), vertSpriteMask.localScale.z);
+                vertSpriteMask.localScale = new Vector3(vertSpriteMask.lossyScale.x, Mathf.Abs(hit2D.point.y - vertRaycastPoint.position.y), vertSpriteMask.lossyScale.z);
             //}
         }
         else{
             vertSpriteMask.position = new Vector3(vertSpriteMask.position.x, vertRaycastPoint.position.y, vertSpriteMask.position.z);
-            vertSpriteMask.localScale = new Vector3(vertSpriteMask.localScale.x, 0, vertSpriteMask.localScale.z);
+            vertSpriteMask.localScale = new Vector3(vertSpriteMask.lossyScale.x, 0, vertSpriteMask.lossyScale.z);
         }
     }
 }

@@ -5,7 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - Throwable
-  - Vine
   layers:
   - Default
   - TransparentFX
@@ -17,6 +16,7 @@ TagManager:
   - Bounds
   - Interactables
   - Obstacle
+  - 
   - 
   - 
   - 
@@ -52,12 +52,12 @@ TagManager:
   - name: camera
     uniqueID: 295519415
     locked: 0
+  - name: wires
+    uniqueID: 1252451331
+    locked: 0
   - name: FadeLayer
     uniqueID: 2398605787
     locked: 0
   - name: UI
     uniqueID: 2796910643
-    locked: 0
-  - name: wires
-    uniqueID: 1252451331
     locked: 0
