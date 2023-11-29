@@ -19,6 +19,7 @@ public class CameraFollow : MonoBehaviour
 
     [SerializeField]
     float moveSpeed;
+    [SerializeField, Tooltip("the vertical offset for camera follow")]float vOffset = 2;
 
     Transform currentTrackPoint;
 
@@ -35,6 +36,7 @@ public class CameraFollow : MonoBehaviour
 
     private void FixedUpdate()
     {
+        
         float cameraMoveSpeed = Time.fixedDeltaTime * moveSpeed * Mathf.Abs(playerRB.velocity.x);
         if (cameraMoveSpeed <= 0)
             cameraMoveSpeed = Time.fixedDeltaTime * moveSpeed;
@@ -60,6 +62,9 @@ public class CameraFollow : MonoBehaviour
         }
         else
             transform.position = Vector3.Lerp(transform.position, new(currentTrackPoint.position.x, transform.position.y, transform.position.z), cameraMoveSpeed);
+
+
+        transform.position = new Vector3(transform.position.x, playerRB.transform.position.y + vOffset, transform.position.z);
     }
 
     public void UpdateCurrentTrackPoint(GameObject side)

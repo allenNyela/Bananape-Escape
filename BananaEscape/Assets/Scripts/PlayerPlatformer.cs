@@ -40,8 +40,8 @@ public class PlayerPlatformer : MonoBehaviour
 
     public void FixedUpdate()
     {
-        //if (!GameManager.Instance.isPlaying())
-        //    return;
+        if (!GameManager.Instance.isPlaying())
+           return;
 
 
         if (Physics2D.Raycast(transform.position, Vector2.down, 1.5f))
