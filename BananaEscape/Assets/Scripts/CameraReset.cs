@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraReset : MonoBehaviour
 {
     [SerializeField, Tooltip("the main camera for the game")]private Camera mainCamera;
+    [SerializeField, Tooltip("all of the canvases")]private List<GameObject> Canvases;
     private static CameraReset _instance;
     public static CameraReset Instance
     {
@@ -33,5 +34,8 @@ public class CameraReset : MonoBehaviour
             Camera.main.enabled = false;
         }
         mainCamera.enabled = true;
+        foreach(GameObject canvas in Canvases){
+            canvas.SetActive(false);
+        }
     }
 }
