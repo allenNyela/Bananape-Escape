@@ -233,7 +233,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.084905684, g: 0.084905684, b: 0.084905684, a: 1}
   m_FlipX: 0
@@ -288,7 +288,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.050246496, y: 0.46804893}
-  m_ConnectedAnchor: {x: -0.3443548, y: -0.33614632}
+  m_ConnectedAnchor: {x: -0.3443547, y: -0.33614632}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -417,7 +417,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.084905684, g: 0.084905684, b: 0.084905684, a: 1}
   m_FlipX: 0
@@ -472,7 +472,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.050246496, y: 0.46804893}
-  m_ConnectedAnchor: {x: 0.34928042, y: -0.48716113}
+  m_ConnectedAnchor: {x: 0.3492803, y: -0.48716113}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -606,8 +606,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.16000068, y: -8.19, z: 1.4218957}
-  m_LocalScale: {x: 2.710359, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 3.5, y: 3.5, z: 3.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1550902513729969789}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -652,7 +652,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4f84b89748c0a694daa10b99936b7d1c, type: 3}
   m_Color: {r: 0.6037736, g: 0.6037736, b: 0.6037736, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -695,18 +695,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.006265156}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1, y: 0.28125}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.29410952}
   m_EdgeRadius: 0
 --- !u!50 &5811339528156645916
 Rigidbody2D:
@@ -750,8 +750,8 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: -0.00000018963948, y: 0.5}
-  m_ConnectedAnchor: {x: 2.0895827, y: -0.47680953}
+  m_Anchor: {x: -0.00000004427774, y: 0.14062504}
+  m_ConnectedAnchor: {x: 2.0895827, y: -0.4778045}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0

@@ -26,6 +26,9 @@ public class CamSwitch : MonoBehaviour
         if (!player.Grounded)
             return;
 
+        if (!Level1Manager.Instance.CanWin())
+            Level1Manager.Instance.Loose("You can't flip that switch with those pesky cameras on!");
+
         // if close enough
         if (on && Vector2.Distance(player.transform.position, transform.position) < maxDist)
         {
