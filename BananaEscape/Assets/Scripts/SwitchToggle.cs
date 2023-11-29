@@ -9,6 +9,9 @@ public class SwitchToggle : MonoBehaviour
     [SerializeField, Tooltip("wire prefab")]private GameObject wirePrefab;
     [SerializeField, Tooltip("the color attributed to this toggle")]private Color circuitColor;
     [SerializeField, Tooltip("the z depth for wires")]private float wireZDepth = -2;
+    // [SerializeField, Tooltip("the off sprite")]private Sprite offSprite;
+    // [SerializeField, Tooltip("the on sprite")]private Sprite onSprite;
+    //private bool 
     // Start is called before the first frame update
     public void Toggle()
     {
@@ -24,11 +27,14 @@ public class SwitchToggle : MonoBehaviour
         }
     }
 
-    private void CreateWires() {
+    private void CreateWires(Camera camera = null) {
+        if(camera == null){
+            camera = Camera.main;
+        }
         foreach(SwitchToggleObject toggleObj in toggleObjects){
             GameObject wireObj = Instantiate(wirePrefab, transform);
             LineRenderer renderer = wireObj.GetComponent<LineRenderer>();
-            Vector3 worldPos = Camera.main.ScreenToWorldPoint(transform.position);
+            Vector3 worldPos = transform.position;//camera.ScreenToWorldPoint(transform.position);
             //renderer.SetPositions(new Vector3[] { new Vector3(worldPos.x, worldPos.y, toggleObj.transform.position.z), toggleObj.transform.position });
             renderer.SetPositions(new Vector3[] { new Vector3(worldPos.x, worldPos.y, wireZDepth), new Vector3(toggleObj.getAttachPos().x, toggleObj.getAttachPos().y, wireZDepth) });
             renderer.startColor = circuitColor;
@@ -37,7 +43,14 @@ public class SwitchToggle : MonoBehaviour
         }
     }
 
-    private void Start() {
+    private void Awake() {
         CreateWires();
+        EnableWires(true);
+    }
+
+    public void SetupWires(Camera camera){
+        CreateWires(camera);
+        EnableWires(true);
+        Debug.Log("Setting up wires");
     }
 }
