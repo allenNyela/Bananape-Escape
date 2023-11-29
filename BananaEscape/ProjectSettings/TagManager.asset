@@ -12,9 +12,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Ground
+  - Bounds
+  - Interactables
+  - Obstacle
   - 
   - 
   - 
@@ -39,6 +40,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2511203843
+    locked: 0
+  - name: Lights
+    uniqueID: 324879767
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: camera
+    uniqueID: 295519415
+    locked: 0
+  - name: wires
+    uniqueID: 1252451331
+    locked: 0
+  - name: FadeLayer
+    uniqueID: 2398605787
     locked: 0
