@@ -3974,7 +3974,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 223092386350361517, guid: 349f41a2e57b3b0488bbb44fed161358, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5198207593439746334, guid: 349f41a2e57b3b0488bbb44fed161358, type: 3}
       propertyPath: m_Pivot.x
@@ -7652,7 +7652,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 920828048}
   Unlocked: {fileID: 2040246770}
-  OpenedVent: {fileID: 21300000, guid: bf568c623edd58b4db2ef078bd1a0a86, type: 3}
+  OpenedVent: {fileID: 21300000, guid: c9ac9dbe50d03144080fd6951bb11ad7, type: 3}
 --- !u!61 &2020566589
 BoxCollider2D:
   m_ObjectHideFlags: 0
