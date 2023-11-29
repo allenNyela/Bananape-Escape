@@ -45,4 +45,8 @@ public class CameraReset : MonoBehaviour
         mainCamera.enabled = true;
         //GameManager.Instance.Pause(false);
     }
+
+    public void HideMainCamera(){
+        mainCamera.enabled = false;
+    }
 }
