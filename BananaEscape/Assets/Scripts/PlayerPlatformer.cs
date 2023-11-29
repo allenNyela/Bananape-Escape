@@ -74,10 +74,24 @@ public class PlayerPlatformer : MonoBehaviour
             Vector3 direction = (mousePos - transform.position);
             direction.Normalize();
 
-            heldObject.transform.position = transform.position + direction * PickupManager.Instance.PickupRadius;
+            float dist = Vector2.Distance(mousePos, transform.position);
+
+            if (PickupManager.Instance != null && dist < PickupManager.Instance.PickupRadius)
+                heldObject.transform.position = mousePos;
+            else
+                heldObject.transform.position = transform.position + direction * PickupManager.Instance.PickupRadius;
+
             Rigidbody2D objRB = heldObject.GetComponent<Rigidbody2D>();
+            Collider2D collider = heldObject.GetComponent<Collider2D>();
+
             if (objRB.gravityScale != 0)
                 objRB.gravityScale = 0;
+
+            if (!objRB.freezeRotation)
+                objRB.freezeRotation = true;
+
+            if (collider.enabled)
+                collider.enabled = false;
         }
     }
 
@@ -160,6 +174,7 @@ public class PlayerPlatformer : MonoBehaviour
             return;
         
         Rigidbody2D objRB = heldObject.GetComponent<Rigidbody2D>();
+        Collider2D objCollider = heldObject.GetComponent<Collider2D>();
 
         Debug.Log(context.action.ReadValue<float>());
 
@@ -172,6 +187,8 @@ public class PlayerPlatformer : MonoBehaviour
 
             objRB.AddForce(direction * maxSpeed, ForceMode2D.Impulse);
             objRB.gravityScale = 2;
+            objRB.freezeRotation = false;
+            objCollider.enabled = true;
             heldObject = null;
         }
     }
@@ -182,12 +199,15 @@ public class PlayerPlatformer : MonoBehaviour
             return;
 
         Rigidbody2D objRB = heldObject.GetComponent<Rigidbody2D>();
+        Collider2D objCollider = heldObject.GetComponent<Collider2D>();
 
         Debug.Log(context.action.ReadValue<float>());
 
         if (canThrow && context.action.ReadValue<float>() != 0)
         {
             objRB.gravityScale = 2;
+            objRB.freezeRotation = false;
+            objCollider.enabled = true;
             heldObject = null;
         }
     }
