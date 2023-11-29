@@ -18,6 +18,7 @@ public class LevelChangeArea : MonoBehaviour
         if(sceneToChangeTo == ""){
             sceneToChangeTo = sceneTransitionName;
         }
+        GameManager.Instance.Pause(true);
         LevelTransition.Instance.SweepIn(sceneToChangeTo);
     }
 
