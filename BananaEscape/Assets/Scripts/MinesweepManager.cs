@@ -33,8 +33,8 @@ public class MinesweepManager : MonoBehaviour
         {
             for (int j = 0; j < 10; j++)
             {
-                mineField[i, j] = Random.Range(0, 9);
-                discoveredNums[i, j] = false;
+                //mineField[i, j] = Random.Range(0, 9);
+                //discoveredNums[i, j] = false;
             }
         }
 
@@ -42,8 +42,8 @@ public class MinesweepManager : MonoBehaviour
         {
             for (int j = 0; j < 10; j++)
             {
-                if (mineField[i, j] == 0)
-                    discoveredNums[i, j] = true;       
+                //if (mineField[i, j] == 0)
+                //    discoveredNums[i, j] = true;       
             }
         }
     }
