@@ -39,7 +39,9 @@ public class GameManager : MonoBehaviour
     }
 
     public void GameOver(){
-        gameOverCanvas.SetActive(true);
+        if(gameOverCanvas){
+            gameOverCanvas.SetActive(true);
+        }
         paused = true;
     }
 }
