@@ -63,8 +63,8 @@ public class CameraFollow : MonoBehaviour
         else
             transform.position = Vector3.Lerp(transform.position, new(currentTrackPoint.position.x, transform.position.y, transform.position.z), cameraMoveSpeed);
 
-
-        transform.position = new Vector3(transform.position.x, playerRB.transform.position.y + vOffset, transform.position.z);
+        if (!playerRB.GetComponent<PlayerPlatformer>().isLevel1)
+            transform.position = new Vector3(transform.position.x, playerRB.transform.position.y + vOffset, transform.position.z);
     }
 
     public void UpdateCurrentTrackPoint(GameObject side)

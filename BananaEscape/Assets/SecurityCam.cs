@@ -13,6 +13,12 @@ public class SecurityCam : MonoBehaviour
     [SerializeField]
     float disableTime = 5f;
 
+    [SerializeField]
+    Sprite offSprite;
+
+    [SerializeField]
+    Sprite onSprite;
+
     bool isTemporaryDisable = true;
 
     float timeDisabled = 0f;
@@ -42,16 +48,16 @@ public class SecurityCam : MonoBehaviour
     public void DisableCam(bool isTemp)
     {
         camEnabled = false;
-        GetComponent<SpriteRenderer>().color = Color.gray;
         Level1Manager.Instance.DisableCam(cameraIdx);
+        GetComponent<SpriteRenderer>().sprite = offSprite;
         isTemporaryDisable = isTemp;
     }
 
     public void EnableCam()
     {
         camEnabled = true;
-        GetComponent<SpriteRenderer>().color = Color.red;
         Level1Manager.Instance.EnableCam(cameraIdx);
+        GetComponent<SpriteRenderer>().sprite = onSprite;
         isTemporaryDisable = true;
     }
 }

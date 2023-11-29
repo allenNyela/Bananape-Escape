@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem.Switch;
 using UnityEngine.SceneManagement;
@@ -10,6 +11,12 @@ public class Level1Manager : MonoBehaviour
 
     [SerializeField]
     Canvas gameOverCanvas;
+
+    [SerializeField]
+    TextMeshProUGUI gameOverText;
+
+    [SerializeField]
+    LevelChangeArea LevelChangeArea;
 
     private void Awake()
     {
@@ -27,20 +34,23 @@ public class Level1Manager : MonoBehaviour
 
     public bool CanWin()
     {
-        return !(cam1enabled && cam2enabled);
+        return !cam1enabled && !cam2enabled;
     }
 
     public void Win()
     {
         // winner winner chicken dinner!
         Debug.Log("Win!");
+        LevelChangeArea.ChangeScene();
     }
 
-    public void Loose()
+    public void Loose(string lossMessage)
     {
         // haha! looser! ha! you loose! haha! fucking looser! look at this bozo! hahaha!
         Debug.Log("Lose!");
+        gameOverText.text = lossMessage;
         gameOverCanvas.gameObject.SetActive(true);
+        
     }
 
     public void Retry()
