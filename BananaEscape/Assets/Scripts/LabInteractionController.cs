@@ -11,6 +11,8 @@ public class LabInteractionController : MonoBehaviour
     public GameObject doorClosed;
     public GameObject doorOpen;
 
+    public GameObject Electricity;
+
     public GameObject InventorySystemObj;
     private InventorySystem inventorySystem;
     public GameObject Player;
@@ -53,6 +55,29 @@ public class LabInteractionController : MonoBehaviour
 
     private bool isFaucetOn = false;
 
+    public GameObject Wires;
+    public Sprite CutWiresSprite;
+    public LabInventoryItemData scissorsData;
+
+    public GameObject Scissors;
+    public GameObject OpenDrawer;
+    public LabInventoryItemData SilverKeyData;
+
+    public GameObject goldKey;
+    public GameObject openLocker;
+    public GameObject closedLocker;
+    public LabInventoryItemData GogglesData;
+    public LabInventoryItemData CoatData;
+    public GameObject Scanner;
+
+    public GameObject Vent;
+    public GameObject SilverKey;
+    public LabInventoryItemData ScrewdriverData;
+
+    public GameObject CabinetClosed;
+    public GameObject CabinetOpen;
+    public GameObject Screwdriver;
+    public LabInventoryItemData goldKeyData;
 
     private bool passwordCorrect = false;
     private bool wiresCut = false;
@@ -63,13 +88,16 @@ public class LabInteractionController : MonoBehaviour
     }
 
     private void CheckIfWon() {
-        // if(passwordCorrect && wiresCut && waterSpilled) {
-        if(passwordCorrect && waterSpilled) {
+        if(passwordCorrect && wiresCut && waterSpilled) {
             offline.SetActive(true);
             online.SetActive(false);
 
             doorOpen.SetActive(true);
             doorClosed.SetActive(false);
+        }
+
+        if(wiresCut && passwordCorrect) {
+            Electricity.SetActive(true);
         }
     }
 
@@ -184,6 +212,53 @@ public class LabInteractionController : MonoBehaviour
         faucet.GetComponent<SpriteRenderer>().sprite = faucetOff;
         isFaucetOn = false;
         CheckIfWon();
+    }
+
+    public void CutWires() {
+        if (Vector3.Distance (Wires.transform.position, Player.transform.position) < 8 && !wiresCut) {
+            if(inventorySystem.Get(scissorsData) != null) {
+                Wires.GetComponent<SpriteRenderer>().sprite = CutWiresSprite;
+                inventorySystem.Remove(scissorsData);
+                wiresCut = true;
+                CheckIfWon();
+            }
+        }
+    }
+
+    public void OpenScissorDrawer() {
+        if(inventorySystem.Get(SilverKeyData) != null) {
+            inventorySystem.Remove(SilverKeyData);
+            OpenDrawer.SetActive(true);
+            Scissors.SetActive(true);
+        }
+    }
+
+    public void OpenLocker() {
+        if(Vector3.Distance (closedLocker.transform.position, Player.transform.position) < 5 && inventorySystem.Get(GogglesData) != null && inventorySystem.Get(CoatData) != null) {
+            inventorySystem.Remove(GogglesData);
+            inventorySystem.Remove(CoatData);
+            openLocker.SetActive(true);
+            goldKey.SetActive(true);
+            closedLocker.SetActive(false);
+            Scanner.SetActive(false);
+        }
+    }
+
+    public void OpenVent() {
+        if(Vector3.Distance (Vent.transform.position, Player.transform.position) < 3 && inventorySystem.Get(ScrewdriverData) != null) {
+            inventorySystem.Remove(ScrewdriverData);
+            Vent.SetActive(false);
+            SilverKey.SetActive(true);
+        }
+    }
+
+    public void OpenCabinet() {
+        if(Vector3.Distance (CabinetClosed.transform.position, Player.transform.position) < 3 && inventorySystem.Get(goldKeyData) != null) {
+            inventorySystem.Remove(goldKeyData);
+            CabinetClosed.SetActive(false);
+            CabinetOpen.SetActive(true);
+            Screwdriver.SetActive(true);
+        }
     }
 
 }
