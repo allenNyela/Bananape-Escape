@@ -707,6 +707,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2255897770608071173, guid: 27f92e3c9dfa58449878605caf544cea, type: 3}
+      propertyPath: isLevel1
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4530219938392952040, guid: 27f92e3c9dfa58449878605caf544cea, type: 3}
       propertyPath: m_Size.x
       value: 16
@@ -14037,7 +14041,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1413550204263190034, guid: 9ba7aaee5ee9e7d45b7170d919f56c26, type: 3}
       propertyPath: sceneTransitionName
-      value: NyelaScene
+      value: Lab
       objectReference: {fileID: 0}
     - target: {fileID: 1888754948172363372, guid: 9ba7aaee5ee9e7d45b7170d919f56c26, type: 3}
       propertyPath: m_Name

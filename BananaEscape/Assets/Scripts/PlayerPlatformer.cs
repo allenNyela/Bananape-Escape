@@ -14,19 +14,21 @@ public class PlayerPlatformer : MonoBehaviour
     [SerializeField] Canvas gameOver;
 
     [SerializeField] public GameObject heldObject;
-    
+
     InputAction movementAction;
     InputAction throwAction;
     Rigidbody2D rb;
     SpriteRenderer sprite;
     Animator animator;
-    
+
     bool canJump = false;
     bool canThrow = true;
     bool damageSlowDown = false;
     public bool swinging = false;
 
-    public bool Grounded { get { return canJump; } }
+    public bool isLevel1 = false;
+
+public bool Grounded { get { return canJump; } }
 
     private void Start()
     {
@@ -40,9 +42,8 @@ public class PlayerPlatformer : MonoBehaviour
 
     public void FixedUpdate()
     {
-        if (!GameManager.Instance.isPlaying())
-           return;
-
+        if (!isLevel1 && !GameManager.Instance.isPlaying())
+            return;
 
         if (Physics2D.Raycast(transform.position, Vector2.down, 1.5f))
             canJump = true;
