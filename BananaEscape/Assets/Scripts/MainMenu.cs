@@ -19,7 +19,7 @@ public class MainMenu : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("ThomasPuzzle");
     }
 
     public void Quit()
