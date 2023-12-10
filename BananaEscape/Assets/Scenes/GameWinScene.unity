@@ -205,7 +205,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 29048930}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2074388218}
+        m_TargetAssemblyTypeName: LevelTransition, Assembly-CSharp
+        m_MethodName: SweepIn
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MainMenu
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &29048930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1024,7 +1036,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 223092386350361517, guid: 349f41a2e57b3b0488bbb44fed161358, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5198207593439746334, guid: 349f41a2e57b3b0488bbb44fed161358, type: 3}
       propertyPath: m_Pivot.x
@@ -1111,6 +1123,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 349f41a2e57b3b0488bbb44fed161358, type: 3}
+--- !u!114 &2074388218 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4284096629641285148, guid: 349f41a2e57b3b0488bbb44fed161358, type: 3}
+  m_PrefabInstance: {fileID: 2074388217}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5dc00bb6ca69be4bb63c0a977340e14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
